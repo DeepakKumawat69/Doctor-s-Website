@@ -92,16 +92,6 @@ menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');me
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
 document.getElementById('year').textContent=new Date().getFullYear();
 const dateInput=document.getElementById('date');dateInput.min=new Date().toISOString().slice(0,10);
-document.getElementById('bookingForm')
-
-
-const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
-menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
-document.getElementById('year').textContent=new Date().getFullYear();
-const dateInput=document.getElementById('date');dateInput.min=new Date().toISOString().slice(0,10);
-document.getElementById('bookingForm').
-
-.addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value.trim(),phone=document.getElementById('phone').value.trim(),service=document.getElementById('service').value,date=document.getElementById('date').value||'Flexible',message=document.getElementById('message').value.trim()||'No additional message';const body=`Hello Skin Bliss Aesthetic Clinic, I would like to enquire about an appointment.\nName: ${name}\nPhone: ${phone}\nService: ${service}\nPreferred date: ${date}\nMessage: ${message}`;window.open('https://wa.me/917447455225?text='+encodeURIComponent(body),'_blank','noopener');});
+document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value.trim(),phone=document.getElementById('phone').value.trim(),service=document.getElementById('service').value,date=document.getElementById('date').value||'Flexible',message=document.getElementById('message').value.trim()||'No additional message';const body=`Hello Skin Bliss Aesthetic Clinic, I would like to enquire about an appointment.\nName: ${name}\nPhone: ${phone}\nService: ${service}\nPreferred date: ${date}\nMessage: ${message}`;window.open('https://wa.me/917447455225?text='+encodeURIComponent(body),'_blank','noopener');});
 </script>
 </body></html>
